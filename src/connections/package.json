@@ -1,0 +1,46 @@
+{
+  "name": "@css-houdini/connections",
+  "version": "1.0.0",
+  "description": "CSS Houdini Background Connections",
+  "source": "src/index.js",
+  "main": "dist/connections.js",
+  "module": "dist/connections.module.js",
+  "unpkg": "dist/connections.umd.js",
+  "scripts": {
+    "build": "rimraf dist && microbundle --no-sourcemap",
+    "prepublish": "npm run build",
+    "test": "npm run test:copy && npm run test:server",
+    "test:copy": "cp -fv ./src/index.js ./test/connections.js",
+    "test:server": "node ./server.js"
+  },
+  "keywords": [
+    "houdini",
+    "css",
+    "css-houdini",
+    "PaintWorklet",
+    "paitn",
+    "worklet"
+  ],
+  "author": {
+    "name": "Joan León",
+    "email": "joan.leon@gmail.com",
+    "twitter": "@nucliweb",
+    "web": "https://joanleon.dev"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@s-ui/lint/eslintrc.js"
+    ]
+  },
+  "prettier": "./node_modules/@s-ui/lint/.prettierrc.js",
+  "stylelint": {
+    "extends": "./node_modules/@s-ui/lint/stylelint.config.js"
+  },
+  "devDependencies": {
+    "@s-ui/lint": "^3.25.0",
+    "express": "^4.17.1",
+    "microbundle": "^0.12.4",
+    "rimraf": "^3.0.2"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "css-houdini-connections",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CSS Houdini Background Connections",
   "source": "src/index.js",
   "main": "dist/connections.js",
@@ -42,5 +42,13 @@
     "express": "^4.17.1",
     "microbundle": "^0.12.4",
     "rimraf": "^3.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSSHoudini/css-houdini.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CSSHoudini/css-houdini/issues"
+  },
+  "homepage": "https://github.com/CSSHoudini/css-houdini/tree/main/src/connections"
 }

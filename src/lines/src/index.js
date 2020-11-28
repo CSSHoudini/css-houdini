@@ -53,7 +53,7 @@ registerPaint(
 
       ctx.rotate((rotate * Math.PI) / 180)
       // ctx.rotate(degreesToRadians(rotate))
-      for (let i = 0; i < saveArea / gap; i++) {
+      for (let i = 0; i < saveArea; i++) {
         ctx.beginPath()
 
         // const gap = gapLines[indexGap]

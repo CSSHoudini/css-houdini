@@ -60,7 +60,7 @@ registerPaint(
         // indexGap >= maxGaps - 1 ? (indexGap = 0) : indexGap++
         // console.log({gap})
 
-        ctx.moveTo(0 - saveArea / 2, -saveArea + i * gap)
+        ctx.moveTo(0 - saveArea, -saveArea + i * gap)
         ctx.lineTo(w + saveArea, -saveArea + i * gap)
 
         ctx.lineWidth = widthLines[indexLine]

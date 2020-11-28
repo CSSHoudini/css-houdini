@@ -1,0 +1,58 @@
+:root {
+  --size: 300px;
+  --color-dark: #353535;
+  --color-medium: #858585;
+  --color-light: #d3d3d3;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --size: 600px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.css-houdini {
+  height: var(--size);
+  padding: 1em;
+  box-sizing: content-box;
+  width: var(--size);
+}
+
+.lines {
+  /* --lines-colors: #264653, #2a9d8f, #e9c46a, #f4a261, #e76f51; */
+  /* --lines-colors: #583d72, #9f5f80, #ffba93, #ff8e71; */
+  --lines-colors: #f94144ff, #f3722cff, #f8961eff, #f9844aff, #f9c74fff, #90be6dff, #43aa8bff, #4d908eff, #577590ff, #277da1ff;
+  --lines-widths: 3, 8, 2, 5, 1;
+  --lines-gap: 20;
+  --lines-rotate: 130; /* In degrees */
+
+  background-image: paint(lines);
+
+  /* animation-name: gap;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; */
+}
+
+@keyframes gap {
+  0% { --lines-gap: 10 }
+  50% { --lines-gap: 40 }
+  100% { --lines-gap: 10 }
+}

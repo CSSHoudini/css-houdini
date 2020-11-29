@@ -12,7 +12,7 @@ Using CDN is the easiest way to add the library:
 
 ```js
 if ('paintWorklet' in CSS) {
-  CSS.paintWorklet.addModule('...');
+  CSS.paintWorklet.addModule('https://rawcdn.githack.com/CSSHoudini/css-houdini/74a3e2482adf18b41882de48f601a5fc18fd9d5c/src/lines/dist/lines.js');
 }
 ```
 

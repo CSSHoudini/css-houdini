@@ -1,0 +1,42 @@
+:root {
+  --size: 300px;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --size: 600px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.css-houdini {
+  height: var(--size);
+  padding: 1em;
+  box-sizing: content-box;
+  width: var(--size);
+}
+
+.lines {
+  --lines-colors: #f94144, #f3722c, #f8961e, #f9844a, #f9c74f, #90be6d, #43aa8b, #4d908e, #577590, #277da1;
+  --lines-widths: 10, 2, 3, 8;
+  --lines-gaps: 20, 4, 3, 7;
+  --lines-rotate: 0; /* In degrees */
+
+  background-image: paint(lines);
+}

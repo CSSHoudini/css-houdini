@@ -1,5 +1,4 @@
 const element = document.querySelector('.connections')
-console.log(element)
 const PARAMS = {
   particleColor: {r: 150, g: 180, b: 200},
   lineColor: {r: 150, g: 180, b: 200},

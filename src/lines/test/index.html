@@ -9,12 +9,6 @@
   <body>
     <div class="css-houdini lines"></div>
     <script>
-      CSS.registerProperty({
-        name: '--lines-gap',
-        syntax: '<number>',
-        inherits: false,
-        initialValue: 0
-      })
       ;(async function() {
         if (CSS['paintWorklet'] === undefined)
           await import('https://unpkg.com/css-paint-polyfill')
@@ -22,7 +16,7 @@
         CSS.paintWorklet.addModule('./lines.js')
       })()
     </script>
-    <!-- <script src="./js/tweakpane-1.5.6.min.js"></script>
-    <script src="./js/controls.js"></script> -->
+    <script src="./js/tweakpane-1.5.6.min.js"></script>
+    <script src="./js/controls.js"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 
 A CSS Houdini Worklet to show connected nodes.
 
-![CSS Houdini Lines](https://github.com/CSSHoudini/css-houdini/blob/main/src/lines/assets/lines.png)
+![CSS Houdini Lines](https://rawcdn.githack.com/CSSHoudini/css-houdini/37db32100d05d0231d0adb11b128229a8b737d55/src/lines/assets/lines.png)
 
 ## Getting started
 

@@ -1,6 +1,6 @@
 {
   "name": "css-houdini-connections",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CSS Houdini Background Connections",
   "source": "src/index.js",
   "main": "dist/connections.js",

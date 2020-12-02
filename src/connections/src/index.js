@@ -13,7 +13,7 @@ registerPaint(
     }
 
     static get inputProperties() {
-      return this.[
+      return [
         '--connections-particleColor',
         '--connections-lineColor',
         '--connections-particleAmount',
@@ -24,7 +24,7 @@ registerPaint(
     }
 
     parseProps(props) {
-      return this.[
+      return [
         '--connections-particleColor',
         '--connections-lineColor',
         '--connections-particleAmount',

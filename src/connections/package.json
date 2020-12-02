@@ -1,13 +1,12 @@
 {
   "name": "css-houdini-connections",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CSS Houdini Background Connections",
   "source": "src/index.js",
   "main": "dist/connections.js",
-  "module": "dist/connections.module.js",
-  "unpkg": "dist/connections.umd.js",
   "scripts": {
-    "build": "rimraf dist && microbundle --no-sourcemap",
+    "prebuild": "rimraf dist",
+    "build": "microbundle --entry src/index.js --output dist/connections.js --no-pkg-main --format modern --no-sourcemap",
     "prepublish": "npm run build",
     "test": "npm run test:copy && npm run test:server",
     "test:copy": "cp -fv ./src/index.js ./test/connections.js",

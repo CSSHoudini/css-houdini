@@ -1,13 +1,12 @@
 {
   "name": "css-houdini-lines",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CSS Houdini Background Lines",
   "source": "src/index.js",
   "main": "dist/lines.js",
-  "module": "dist/lines.module.js",
-  "unpkg": "dist/lines.umd.js",
   "scripts": {
-    "build": "rimraf dist && microbundle --no-sourcemap",
+    "prebuild": "rimraf dist",
+    "build": "microbundle --entry src/index.js --output dist/lines.js --no-pkg-main --format modern --no-sourcemap",
     "prepublish": "npm run build",
     "test": "npm run test:copy && npm run test:server",
     "test:copy": "cp -fv ./src/index.js ./test/lines.js",

@@ -1,20 +1,23 @@
 /* global registerPaint */
-const LINES_PROPS = [
-  '--lines-colors',
-  '--lines-widths',
-  '--lines-gaps',
-  '--lines-rotate'
-]
-
 registerPaint(
   'lines',
   class {
     static get inputProperties() {
-      return LINES_PROPS
+      return [
+        '--lines-colors',
+        '--lines-widths',
+        '--lines-gaps',
+        '--lines-rotate'
+      ]
     }
 
     parseProps(props) {
-      return LINES_PROPS.map(
+      return [
+        '--lines-colors',
+        '--lines-widths',
+        '--lines-gaps',
+        '--lines-rotate'
+      ].map(
         prop =>
           props
             .get(prop)

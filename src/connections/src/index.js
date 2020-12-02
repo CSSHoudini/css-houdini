@@ -1,22 +1,42 @@
-const CONNECTIONS_PROPS = [
-  '--connections-particleColor',
-  '--connections-lineColor',
-  '--connections-particleAmount',
-  '--connections-defaultRadius',
-  '--connections-variantRadius',
-  '--connections-linkRadius'
-]
-
 registerPaint(
   'connections',
   class {
+    constructor() {
+      this.CONNECTIONS_PROPS = [
+        '--connections-particleColor',
+        '--connections-lineColor',
+        '--connections-particleAmount',
+        '--connections-defaultRadius',
+        '--connections-variantRadius',
+        '--connections-linkRadius'
+      ]
+    }
+
     static get inputProperties() {
-      return CONNECTIONS_PROPS
+      return this.[
+        '--connections-particleColor',
+        '--connections-lineColor',
+        '--connections-particleAmount',
+        '--connections-defaultRadius',
+        '--connections-variantRadius',
+        '--connections-linkRadius'
+      ]
     }
 
     parseProps(props) {
-      return CONNECTIONS_PROPS.map(
-        prop => props.get(prop).toString().trim() || undefined
+      return this.[
+        '--connections-particleColor',
+        '--connections-lineColor',
+        '--connections-particleAmount',
+        '--connections-defaultRadius',
+        '--connections-variantRadius',
+        '--connections-linkRadius'
+      ].map(
+        prop =>
+          props
+            .get(prop)
+            .toString()
+            .trim() || undefined
       )
     }
 

@@ -1,17 +1,6 @@
 registerPaint(
   'connections',
   class {
-    constructor() {
-      this.CONNECTIONS_PROPS = [
-        '--connections-particleColor',
-        '--connections-lineColor',
-        '--connections-particleAmount',
-        '--connections-defaultRadius',
-        '--connections-variantRadius',
-        '--connections-linkRadius'
-      ]
-    }
-
     static get inputProperties() {
       return [
         '--connections-particleColor',
@@ -21,6 +10,17 @@ registerPaint(
         '--connections-variantRadius',
         '--connections-linkRadius'
       ]
+    }
+
+    hexToRgb(hex) {
+      let colors = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+      return colors
+        ? [
+            parseInt(colors[1], 16),
+            parseInt(colors[2], 16),
+            parseInt(colors[3], 16)
+          ]
+        : null
     }
 
     parseProps(props) {
@@ -56,7 +56,10 @@ registerPaint(
       ] = this.parseProps(props)
 
       let particles = []
-      const [r, g, b] = lineColor.match(/\d+/g)
+      const isHexColor = /^#([0-9A-F]{3}){1,2}$/i.test(lineColor)
+      const [r, g, b] = isHexColor
+        ? this.hexToRgb(lineColor)
+        : lineColor.match(/\d+/g)
 
       const particle = (x, y) => {
         let radius = +defaultRadius + Math.random() * +variantRadius

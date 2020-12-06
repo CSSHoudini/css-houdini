@@ -37,7 +37,7 @@ registerPaint(
 
       const sqrtArea = Math.floor(Math.sqrt(Math.pow(w, 2) + Math.pow(h, 2)))
       const saveArea = sqrtArea * 2
-      const colorLines = colors.split(',').map(color => color)
+      const colorLines = colors.split(',').map(color => color.trim())
       const maxColors = colorLines.length
       let indexColor = 0
 

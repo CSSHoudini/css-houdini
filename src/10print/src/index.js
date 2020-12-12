@@ -7,8 +7,7 @@ registerPaint(
     }
 
     parseProps(props) {
-      return [
-      ].map(
+      return [].map(
         prop =>
           props
             .get(prop)

@@ -1,0 +1,53 @@
+{
+  "name": "css-houdini-grid",
+  "version": "0.0.1",
+  "description": "CSS Houdini Background grid",
+  "source": "src/index.js",
+  "main": "dist/grid.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "microbundle --entry src/index.js --output dist/grid.js --no-pkg-main --format modern --no-sourcemap",
+    "prepublish": "npm run build",
+    "test": "npm run test:copy && npm run test:server",
+    "test:copy": "cp -fv ./src/index.js ./test/grid.js",
+    "test:server": "node ./server.js"
+  },
+  "keywords": [
+    "houdini",
+    "css",
+    "css-houdini",
+    "PaintWorklet",
+    "paint",
+    "worklet"
+  ],
+  "author": {
+    "name": "Joan León",
+    "email": "joan.leon@gmail.com",
+    "twitter": "@nucliweb",
+    "web": "https://joanleon.dev"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@s-ui/lint/eslintrc.js"
+    ]
+  },
+  "prettier": "./node_modules/@s-ui/lint/.prettierrc.js",
+  "stylelint": {
+    "extends": "./node_modules/@s-ui/lint/stylelint.config.js"
+  },
+  "devDependencies": {
+    "@s-ui/lint": "^3.25.0",
+    "express": "^4.17.1",
+    "microbundle": "^0.12.4",
+    "rimraf": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSSHoudini/css-houdini.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CSSHoudini/css-houdini/issues"
+  },
+  "homepage": "https://github.com/CSSHoudini/css-houdini/tree/main/src/grid"
+}

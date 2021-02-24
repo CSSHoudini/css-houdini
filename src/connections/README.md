@@ -26,7 +26,7 @@ if ('paintWorklet' in CSS) {
 
 #### You can use the polyfill
 
-To add support for all moder browsers, you can load the worklet with [css-paint-polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill) fallback.
+To add support for all modern browsers, you can load the worklet with [css-paint-polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill) fallback.
 
 ```html
 <script>
